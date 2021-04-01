@@ -3,12 +3,16 @@ pipeline{
         stages{
             stage('Build Cluster'){
                 steps{
-                    bash setup.sh
+                    sh ''' #!/bin/bash
+                          bash setup.sh
+                    '''      
                 }
             }
             stage('Deploy MySQL Pod'){
                 steps{
-                    bash setup-mysql.sh 
+                    sh ''' #!/bin/bash
+                          bash setup-mysql.sh
+                    '''                      
                 }
             }
         }
