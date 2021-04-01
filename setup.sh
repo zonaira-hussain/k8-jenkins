@@ -3,7 +3,7 @@
 echo 'launching cluster'
 eksctl create cluster \
 --name JenkinsCluster \
---region eu-west-2 \
+--region eu-west-1 \
 --nodegroup-name DemoNodes \
 --nodes 2 \
 --nodes-min 2 \
